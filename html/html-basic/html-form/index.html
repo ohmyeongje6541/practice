@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>메모 작성 폼</h1>
+
+  <form action="#">
+    <label for="name">제목:</label>
+    <input type="text" id="name" placeholder="제목을 입력하세요">
+    <br>
+    <label for="content">내용:</label>
+    <textarea name="" id="content" placeholder="내용을 입력하세요"></textarea>
+    <br>
+    <button>메모 저장</button>
+    
+  </form>
+  <hr>
+
+  <h1>숙소 예약 정보 작성 폼</h1>
+
+  <h2>숙소 예약하기</h2>
+  <form action="">
+    <label for="check">체크인:</label>
+    <input type="date" id="check" >
+    <br>
+    <label for="checkout">체크아웃:</label>
+    <input type="date" id="checkout">
+    <br>
+    <label for="adult">성인:</label>
+    <input type="number" min="1" id="adult">
+    <br>
+    <label for="child">어린이</label>
+    <input type="number" min="0" id="child">
+    <br>
+    <label for="">선호 객실 타입</label> <br>
+    <input type="radio" name="radio1" id="radio1">
+    <label for="radio1">스탠다드</label>
+    <input type="radio" name="radio2" id="radio2">
+    <label for="radio2">디럭스</label>
+    <input type="radio" name="radio3" id="radio3">
+    <label for="radio3">스위트</label> <br>
+    <label for="please">요청 사항:</label>
+    <textarea name="" id="please">특별히 요청하고 싶은 사항을 적어주세요</textarea>
+    <br>
+    <button>예약하기</button>
+
+  </form>
+</body>
+</html>
