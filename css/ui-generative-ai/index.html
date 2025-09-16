@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>Stitch Design</title>
+
+    <!-- 외부 폰트 및 아이콘 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&family=Inter:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900"
+      rel="stylesheet"
+      onload="this.rel='stylesheet'"
+    />
+    <link rel="icon" href="data:image/x-icon;base64," type="image/x-icon" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- 커스텀 CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <style type="text/tailwindcss">
+      :root {
+        --primary-color: #137fec;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <div>
+        <main>
+          <div>
+            <!-- HEADER -->
+            <header>
+              <h1>나의 하루 기록</h1>
+              <p>나의 하루하루를 기록하고 공유하는 공간입니다.</p>
+            </header>
+
+            <h2>나의 기록들</h2>
+
+            <div>
+              <!-- 카드 1: 취미 기록 -->
+              <div class="record-card">
+                <div class="record-image">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNhORV7MR3aPWxSBwXLID4Hzc2ztLlfI2Gog&s"
+                    alt=""
+                  />
+                </div>
+                <div class="record-content">
+                  <h3>취미 기록</h3>
+                  <textarea
+                    placeholder="여기에 내용을 입력하세요..."
+                  ></textarea>
+                </div>
+              </div>
+
+              <!-- 카드 2: 일상 기록 -->
+              <div class="record-card">
+                <div class="record-image">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7hRb6spuc2slyeLg9qTjiJeGelTUsvq1mgA&s"
+                    alt=""
+                  />
+                </div>
+                <div class="record-content">
+                  <h3>일상 기록</h3>
+                  <textarea
+                    placeholder="여기에 내용을 입력하세요..."
+                  ></textarea>
+                </div>
+              </div>
+
+              <!-- 카드 3: 공부 기록 -->
+              <div class="record-card">
+                <div class="record-image">
+                  <img
+                    src="data:image/jpeg;base64,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"
+                    alt=""
+                  />
+                </div>
+                <div class="record-content">
+                  <h3>공부 기록</h3>
+                  <textarea
+                    placeholder="여기에 내용을 입력하세요..."
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
