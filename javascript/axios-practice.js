@@ -7,12 +7,12 @@ const border = "=".repeat(terminalWidth);
 // 아래 요구사항을 참고하여 코드를 작성한다
 // 1. 모든 장바구니 조회(Get all carts) 요청
 // 2. 응답 데이터 객체 출력
-// async function GEtallcarts() {
-//   const response = await axios.get('https://dummyjson.com/carts');
-//   const data = response["data"];
-//   console.log(data);
-// }
-// GEtallcarts();
+async function GEtallcarts() {
+  const response = await axios.get('https://dummyjson.com/carts');
+  const data = response["data"];
+  console.log(data);
+}
+GEtallcarts();
 /* 출력 결과
 {
   "carts": [
@@ -54,12 +54,12 @@ const border = "=".repeat(terminalWidth);
 // 아래 요구사항을 참고하여 코드를 작성한다
 // 1. 10번 장바구니 조회(Get a single cart) 요청
 // 2. 응답 데이터 객체 출력
-// async function Getasinglecart(n) {
-//   const response = await axios.get('https://dummyjson.com/carts/10');
-//   const data = response["data"];
-//   console.log(data)
-// }
-// Getasinglecart(10);
+async function Getasinglecart(n) {
+  const response = await axios.get('https://dummyjson.com/carts/10');
+  const data = response["data"];
+  console.log(data)
+}
+Getasinglecart(10);
 /* 출력 결과
 {
   id: 10,
@@ -98,28 +98,28 @@ const border = "=".repeat(terminalWidth);
 // 아래 요구사항을 참고하여 코드를 작성한다
 // 1. 10번 장바구니 조회(Get a single cart) 요청
 // 2. 응답 데이터 객체에서 상품의 수(total products) 데이터 출력
-// async function totalProducts() {
-//   const response = await axios.get('https://dummyjson.com/carts/10');
-//   const data = response["data"];
-//   console.log(data["totalProducts"])
-// }
-// totalProducts();
+async function totalProducts() {
+  const response = await axios.get('https://dummyjson.com/carts/10');
+  const data = response["data"];
+  console.log(data["totalProducts"])
+}
+totalProducts();
 // /* 출력 결과
 // 2
 // */
-// console.log(border);
+console.log(border);
 
 // TODO: 단일 장바구니에 포함된 상품의 목록(products) 조회
 // 아래 요구사항을 참고하여 코드를 작성한다
 // 1. 10번 장바구니 조회(Get a single cart) 요청
 // 2. 응답 데이터 객체에서 상품의 목록(products) 배열 데이터 출력
-// async function products() {
-//   const response = await axios.get('https://dummyjson.com/carts/10')
-//   const data = response["data"];
-//   console.log(data["products"])
+async function products() {
+  const response = await axios.get('https://dummyjson.com/carts/10')
+  const data = response["data"];
+  console.log(data["products"])
   
-// }
-// products();
+}
+products();
 /* 출력 결과
 [
   {
