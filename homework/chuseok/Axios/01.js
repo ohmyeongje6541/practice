@@ -14,12 +14,12 @@ import axios from "axios";
 // 문제. 아래 요구사항을 해결하는 함수를 작성하고 함수를 실행한다.
 // 함수이름 : getAllProductsResponse
 // 요구사항 : 모든 상품 목록 조회(Get all products) API를 호출하고 응답 객체를 출력한다
-// async function getAllProductsResponse() {
-//   const response = await axios.get("https://dummyjson.com/products");
-//   const data = response["data"];
-//   console.log(data);
-// }
-// getAllProductsResponse();
+async function getAllProductsResponse() {
+  const response = await axios.get("https://dummyjson.com/products");
+  const data = response["data"];
+  console.log(data);
+}
+getAllProductsResponse();
 /* 출력 결과
 {
   products: [
@@ -58,12 +58,12 @@ import axios from "axios";
 // 문제. 아래 요구사항을 해결하는 함수를 작성하고 함수를 실행한다.
 // 함수이름 : getAllProductsResponseKeys
 // 요구사항 : 모든 상품 목록 조회(Get all products) API를 호출하고 응답 객체의 모든 속성명(key)을 출력한다
-// async function getAllProductsResponseKeys() {
-//   const response = await axios.get("https://dummyjson.com/products");
-//   const data = response["data"];
-//   console.log(Object.keys(data));
-// }
-// getAllProductsResponseKeys();
+async function getAllProductsResponseKeys() {
+  const response = await axios.get("https://dummyjson.com/products");
+  const data = response["data"];
+  console.log(Object.keys(data));
+}
+getAllProductsResponseKeys();
 /* 출력 결과
 [ 'products', 'total', 'skip', 'limit' ]
 */
@@ -71,12 +71,12 @@ import axios from "axios";
 // 문제. 아래 요구사항을 해결하는 함수를 작성하고 함수를 실행한다.
 // 함수이름 : getAllProductsArray
 // 요구사항 : 모든 상품 목록 조회(Get all products) API를 호출하고 응답 객체의 속성 중 products 를 불러와서 출력한다
-// async function getAllProductsArray() {
-//   const response = await axios.get("https://dummyjson.com/products");
-//   const data = response["data"]["products"];
-//   console.log(data);
-// }
-// getAllProductsArray();
+async function getAllProductsArray() {
+  const response = await axios.get("https://dummyjson.com/products");
+  const data = response["data"]["products"];
+  console.log(data);
+}
+getAllProductsArray();
 /* 출력 결과
 [
   {
@@ -110,12 +110,12 @@ import axios from "axios";
 // 문제. 아래 요구사항을 해결하는 함수를 작성하고 함수를 실행한다.
 // 함수이름 : getSingleProduct
 // 요구사항 : 단일 상품 목록 조회(Get a single product) API를 호출해서 상품 id가 1인 상품 정보를 출력한다
-// async function getSingleProduct() {
-//   const response = await axios.get("https://dummyjson.com/products/1");
-//   const data = response["data"];
-//   console.log(data);
-// }
-// getSingleProduct();
+async function getSingleProduct() {
+  const response = await axios.get("https://dummyjson.com/products/1");
+  const data = response["data"];
+  console.log(data);
+}
+getSingleProduct();
 /* 출력 결과
 {
   id: 1,
@@ -175,14 +175,14 @@ import axios from "axios";
 // 문제. 아래 요구사항을 해결하는 함수를 작성하고 함수를 실행한다.
 // 함수이름 : getSearchPosts
 // 요구사항 : 게시글 검색 목록 조회(Search posts) API를 호출해서 검색어가 "love"인 게시글 목록의 응답 객체를 출력한다
-// async function getSearchPosts() {
-//   const response = await axios.get(
-//     "https://dummyjson.com/posts/search?q=love"
-//   );
-//   const data = response["data"];
-//   console.log(data);
-// }
-// getSearchPosts();
+async function getSearchPosts() {
+  const response = await axios.get(
+    "https://dummyjson.com/posts/search?q=love"
+  );
+  const data = response["data"];
+  console.log(data);
+}
+getSearchPosts();
 /* 출력 결과
 {
   posts: [
@@ -206,13 +206,13 @@ import axios from "axios";
 // 문제. 아래 요구사항을 해결하는 함수를 작성하고 함수를 실행한다.
 // 함수이름 : getSearchPostsArray
 // 요구사항 : 게시글 검색 목록 조회(Search posts) API를 호출해서 검색어가 "love"인 게시글 목록의 응답 객체의 속성 중 posts 배열을 출력한다
-// async function getSearchPostsArray() {
-//   const response = await axios.get("https://dummyjson.com/posts/search?q=love");
-//   const data = response["data"];
-//   const posts = data["posts"]
-//   console.log(posts)
-// }
-// getSearchPostsArray();
+async function getSearchPostsArray() {
+  const response = await axios.get("https://dummyjson.com/posts/search?q=love");
+  const data = response["data"];
+  const posts = data["posts"]
+  console.log(posts)
+}
+getSearchPostsArray();
 /* 출력 결과
 [
   {
