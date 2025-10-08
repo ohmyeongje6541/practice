@@ -11,7 +11,12 @@ import axios from "axios";
 // 문제. 아래 요구사항을 해결하는 함수를 작성하고 함수를 실행한다.
 // 함수이름 : getAllCarsResponse
 // 요구사항 : 모든 장바구니 목록 조회(Get all carts) API를 호출하고 응답 객체를 출력한다
-
+async function getAllCarsResponse() {
+  const response = await axios.get("https://dummyjson.com/carts");
+  const data = response["data"];
+  console.log(data);
+}
+getAllCarsResponse();
 /*
 {
   carts: [
@@ -35,7 +40,12 @@ import axios from "axios";
 // 문제. 아래 요구사항을 해결하는 함수를 작성하고 함수를 실행한다.
 // 함수이름 : getAllCarsResponseKeys
 // 요구사항 : 모든 장바구니 목록 조회(Get all carts) API를 호출하고 응답 객체의 모든 속성명(key)을 출력한다
-
+async function getAllCarsResponseKeys() {
+  const response = await axios.get("https://dummyjson.com/carts");
+  const data = response["data"];
+  console.log(Object.keys(data));
+}
+getAllCarsResponseKeys();
 /* 출력 결과
 [ 'carts', 'total', 'skip', 'limit' ]
 */
@@ -43,7 +53,12 @@ import axios from "axios";
 // 문제. 아래 요구사항을 해결하는 함수를 작성하고 함수를 실행한다.
 // 함수이름 : getAllCarsArray
 // 요구사항 : 모든 장바구니 목록 조회(Get all carts) API를 호출하고 응답 객체의 속성 중 carts 를 불러와서 출력한다
-
+async function getAllCarsArray() {
+  const response = await axios.get("https://dummyjson.com/carts");
+  const data = response["data"]["carts"];
+  console.log(data);
+}
+getAllCarsArray();
 /* 출력 결과
 [
   {
@@ -62,7 +77,12 @@ import axios from "axios";
 // 문제. 아래 요구사항을 해결하는 함수를 작성하고 함수를 실행한다.
 // 함수이름 : getSingleCart
 // 요구사항 : 단일 장바구니 목록 조회(Get a single cart) API를 호출해서 장바구니 id가 1인 장바구니 정보를 출력한다
-
+async function getSingleCart() {
+  const response = await axios.get("https://dummyjson.com/carts/1");
+  const data = response["data"];
+  console.log(data);
+}
+getSingleCart();
 /* 출력 결과
 {
   id: 1,
@@ -120,7 +140,23 @@ import axios from "axios";
 // 함수이름 : getSingleCartFirstProduct
 // 요구사항 : 단일 장바구니 목록 조회(Get a single cart) API를 호출해서 장바구니 id가 1인 장바구니 정보 중 첫 번째 상품의 상세 정보를 출력한다
 // 힌트: Get a single cart 로 첫 번째 상품의 id를 추출하고, 그 id를 기반으로 Get a single product 를 연쇄적으로 호출한다
+async function getSingleCartFirstProduct() {
+  // 1.장바구니 정보 가져오기
+  const cartsresponse = await axios.get("https://dummyjson.com/carts/1");
+  const cartsdata = cartsresponse["data"];
 
+  // 2.첫 번째 상품 아이디 가져오기
+  const firstProductInCart = cartsdata.products[0];
+  const productId = firstProductInCart.id;
+
+  // 3.상품 상세 정보 가져오기
+  const productResponse = await axios.get(
+    `https://dummyjson.com/products/${productId}`
+  );
+  const productData = productResponse["data"];
+  console.log(productData);
+}
+getSingleCartFirstProduct();
 /* 출력 결과
 {
   id: 168,
