@@ -1,14 +1,8 @@
-import React from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Main from "./components/Main";
+import React from 'react'
+import ListContainer from './components/PropsList/ListContainer'
 
-function App() {
+export default function App() {
   return (
-    <>
-      <Header></Header>, <Main></Main>, <Footer></Footer>
-    </>
-  );
+    <div><ListContainer></ListContainer></div>
+  )
 }
-
-export default App;
