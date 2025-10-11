@@ -1,8 +1,8 @@
 import React from 'react'
-import ListContainer from './components/PropsList/ListContainer'
+import Container from './components/GuessRandomNumber/Container'
 
 export default function App() {
   return (
-    <div><ListContainer></ListContainer></div>
+    <div><Container></Container></div>
   )
 }
