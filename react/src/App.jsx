@@ -1,8 +1,11 @@
 import React from 'react'
-import Container from './components/GuessRandomNumber/Container'
+import Products from './components/DummyJSON/Products'
+import Carts from './components/DummyJSON/Carts'
+import Posts from './components/DummyJSON/Posts'
+import Quotes from './components/DummyJSON/Quotes'
 
 export default function App() {
   return (
-    <div><Container></Container></div>
+    <div><Quotes></Quotes></div>
   )
 }
