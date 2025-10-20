@@ -1,9 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import RootLayout from "../layout/RootLayout";
 import Home from "../pages/Home";
-import CreateContent from "../pages/CreateContent"
+import CreateMemo from "../pages/CreateMemo";
+import MemoList from "../pages/MemoList";
 import Chat from "../pages/Chat";
-import StreamChat from "../pages/StreamChat"
+import StreamChat from "../pages/StreamChat";
 import AuthLayout from "../layout/AuthLayout";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
@@ -17,32 +18,35 @@ const router = createBrowserRouter([
         Component: Home,
       },
       {
-        path: "/create-content",
-        Component: CreateContent,
+        path: "create-memo",
+        Component: CreateMemo,
       },
       {
-        path: "/chat",
+        path: "memolist",
+        Component: MemoList,
+      },
+      {
+        path: "chat",
         Component: Chat,
       },
       {
-        path: "/stream-chat",
+        path: "stream-chat",
         Component: StreamChat,
       },
       {
         Component: AuthLayout,
-         children: [
+        children: [
           {
-            path: "/login",
+            path: "login",
             Component: Login,
           },
           {
-            path: "/signup",
+            path: "signup",
             Component: Signup,
           },
         ],
-      }
+      },
     ],
-    
   },
 ]);
 

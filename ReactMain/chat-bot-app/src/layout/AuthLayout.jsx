@@ -7,7 +7,7 @@ export default function AuthLayout() {
   const token = useSelector((state) => state.auth.token);
   if (token) {
     // 로그인한 사용자라면 프로필페이지로 이동
-    return <Navigate to="/serviceIntro" replace></Navigate>;
+    return <Navigate to="/" replace></Navigate>;
   } else {
     return <Outlet></Outlet>;
   }

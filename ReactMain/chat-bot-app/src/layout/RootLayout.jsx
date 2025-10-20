@@ -3,8 +3,11 @@ import { Outlet, NavLink } from "react-router-dom";
 
 export default function RootRayout() {
   const navItems = [
-    { path: "/", label: "홈페이지" },
-    { path: "/create-content", label: "단순 텍스트 생성" },
+    { path: "/signup", label: "회원가입" },
+    { path: "/login", label: "로그인" },
+    { path: "/", label: "서비스 소개 페이지" },
+    { path: "/create-memo", label: "메모 생성 페이지" },
+    { path: "/memolist", label: "메모 목록" },
     { path: "/chat", label: "채팅" },
     { path: "/stream-chat", label: "스트리밍 응답 채팅" },
   ];
